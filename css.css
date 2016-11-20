@@ -1,0 +1,172 @@
+*{
+	margin:0px;
+	padding: 0px;
+}
+html, body{
+	font-family: Segou UI Light, sans-serif;
+	height: 100%;
+}
+/* Wrapper
+-----------------------------------------------------------------------------*/
+.wrapper{
+	background-image: url(Background-Image-251-2.jpg);
+	background-size: cover;
+	min-height: 100%;
+}
+.wrapper:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+/* Header
+-----------------------------------------------------------------------------*/
+.header{
+	width: 100%;
+	height: 100px;
+	//background-color: #292a2f;
+}
+.logo{
+	float: right;
+	padding: 10px;
+}
+/* Menu
+-----------------------------------------------------------------------------*/
+#menu{
+	height: 30px;
+	background-color: #fff;
+	text-align: center;
+	border-radius: 10px; /* забираєм білі кути*/
+	//display: inline-block; /* для того щоб розтягувалося на ширину контенту*/
+	box-shadow: 0 0 10px 3px #333; /*(x, y, велечина розмитості, на скільки розтягнути, колір)*/
+}
+#menu ul{
+	display: inline-block;
+	position: relative;
+	list-style: none;
+	//background:#111;
+	clear: both;
+	}
+#menu li{
+	float: left;
+	//width: 140px; /*всі ячейки меню мають фіксовану ширину*/
+	text-align: center;
+	font-size: 20px;
+}
+#menu li a{
+	text-decoration: none;
+	display: block;
+	background: #575757;
+	padding: 5px 20px;
+	color: #eee;
+	font-variant: small-caps;
+	border: 1px solid #626262;
+	transition: background linear .5s; /*анімація - властивість як час і затримка*/
+
+}
+#menu li a:hover{
+	text-shadow:  0 0 4px #ffc;
+	background: #2E8B57;
+}
+#menu ul ul { 
+	display: none; /*не відображати вложені списки*/
+	position: absolute; /*ігнорує розміщення сусіднього контенту*/
+	top: 100%;
+}
+#menu ul ul li{
+	float: none;
+	position: relative;
+}
+#menu ul ul ul{
+	position: absolute;
+	top: 0;
+	left: 100%;/*зсуваємо ячейку на 100% її розміру вправо*/
+}
+#menu ul li:hover >ul{
+	display: block;/*при наведені відображати вкладені списки*/
+}
+.link--first{
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+.link--last{
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+}
+/*Sidebar
+-----------------------------------------------------------------------------*/
+ .sidebar{
+	float: left; /* Обтікання справа */
+	//background: #00FFFF;
+	width: 250px;
+	position: relative;
+	clear: both;
+}
+h2{
+	text-align: center;
+	padding-top:10px;
+	font-family: Segou UI Light;
+	font-size: 
+}
+.list{
+	padding: 15px;
+	list-style-type: none;
+}
+.link:hover{
+	text-shadow:  0 0 4px #ffc;
+	background: #2E8B57;
+	list-style-image: url(flag-triangle-notification-outline-stroke.png);
+}
+.link{
+	text-decoration: none;
+	display: block;
+	background: #575757;
+	padding: 5px 20px;
+	color: #eee;
+	font-variant: small-caps;
+	border: 1px solid #626262;
+	transition: background linear .5s; /*анімація - властивість як час і затримка*/
+}
+
+/*Content
+-----------------------------------------------------------------------------*/
+.content{
+	//background: #FFD700;
+	// float: right;
+	padding-top: 10px; /*відступ від хедера*/
+	padding-bottom: 60px; /* Щоб контент не налізав на футер. Має бути => розміру футера*/
+	margin-left: 250px; /*Відступ, щоб блок контенту не ниряв під sidebar(рівний розміру sidebar)*/
+	text-align:justify;
+	margin-right: 10px;
+}
+.video{
+	float: left;
+	margin: 7px 7px 7px 0px; /*відступи навколо відео*/
+}
+.section-content{text-align:justify;
+	text-indent: 40px; /* Відступ абзаца */
+	font-size: 18px;
+}
+p:first-letter { 
+	 color:#ea3; /*псевдоелементи*/
+	 font-size: 200%;
+}
+p:first-line {
+	color: #f2f2f2;
+	font-size: 150%;
+}
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer{
+	background: #292a2f;
+	height: 50px;
+	font-style: italic;
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff; 
+	margin-top: -50px; /*накладає 100 пікселів поверх сусіднього елемента*/
+	clear: both; /*Забороняєм обтікання даного елемента іншим елемента зі всіх сторін*/
+}
+.footer_child{
+	padding-top: 16px;
+	margin-left: 16px;
+}
